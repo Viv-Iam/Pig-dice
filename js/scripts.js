@@ -37,14 +37,14 @@ PigD.prototype.hold = function () {
   alert(this.pName + ", your turn is over");
 
   //WHEN PLAYER SCORES 100//
-  Player.prototype.scorehundred = function () {
+  PigD.prototype.scorehundred = function () {
     if (this.totalscore >= 100) {
       alert(this.pName + " is the WINNER!");
     }
   }
 
   //TO PLAY AGAIN//
-  Player.prototype.playAgain = function () {
+  PigD.prototype.playAgain = function () {
     this.roll = 0;
     this.roundscore = 0;
     this.totalscore = 0;
@@ -55,6 +55,7 @@ PigD.prototype.hold = function () {
     $(".input2").val("");
   }
   //USER INTERFACE//
+  $(document).ready(function() {
   $("button#play").click(function(event){
     pone = new Player(true);
     ptwo =  new Player(false);
@@ -75,11 +76,11 @@ PigD.prototype.hold = function () {
       $(".game").hide();
       clearValues();
       pone.playAgain();
-      ptwo.nplayAgain();
+      ptwo.playAgain();
       $("#turntotal1").empty();
       $("#totalscore1").empty();
       $("#roll-1").empty();
-      $("#rturntotal2").empty();
+      $("#turntotal2").empty();
       $("#totalscore2").empty();
       $("#roll-2").empty();
 
@@ -96,8 +97,8 @@ PigD.prototype.hold = function () {
     $("button#roll2").click(function(event){
       ptwo.roll = rollDie();
       $("#roll-2").text(ptwo.roll);
-      player2.rollone();
-      $("#turntotall2").text(ptwo.roundscore);
+      ptwo.rollone();
+      $("#turntotal2").text(ptwo.roundscore);
     });
 
     $("button#hold1").click(function(event){
