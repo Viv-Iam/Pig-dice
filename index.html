@@ -11,17 +11,66 @@
     <title>PIG DICE</title>
   </head>
   <body>
-    <form class="form-inline">
+    <div class="jumbotron">
+    <form id="player1">
       <div class="form-group">
         <label for="player1">Player1</label><br>
-        <input type="text" class="form-control" id="player1" placeholder="Enter Name">
-      </div><br>
+        <!--SECTION FOR FILLING Player1's NAME-->
+        <input type="text" class="form-control" placeholder="Enter Name">
+      </div>
+    </form>
+    <form id="player2">
       <div class="form-group">
         <label for="player1">Player2</label><br>
+        <!--SECTION FOR FILLING Player2's NAME-->
         <input type="text" class="form-control" id="player2" placeholder="Enter Name">
-      </div><br>
-      <button type="submit" class="btn btn-default">PLAY</button>
-    </form>
+      </div>
+      </form>
+      <!--BUTTON START PLAYING GAME-->
+      <button type="submit" class="btn btn-primary btn-lg">PLAY</button>
+      <!-- <button type="button" class="btn btn-primary btn-lg">Large</button> -->
+</div>
+<!-- <div class="player-console container">
+    <button id="new-game" class="btn-success btn">NEW GAME</button>
+    <div class = "row">
+      <div class="col-md-6">
+        <h2>Player 1: <span id = "player1Name"><span></h2>
+          <button id="player1-roll" class="btn-success btn">Roll</button>
+          <button id="player1-hold" class="btn-success btn">Hold</button>
+        <h2>Dice Roll: <span id="die-roll-1"></span></h2>
+        <p>Round Total: <span id="round-total-1"></span></p>
+        <p>Total Score: <span id="total-score-1"></span></p>
+      </div>
 
+    <div class="col-md-6">
+      <h2>Player 2: <span id = "player2Name"><span></h2>
+        <button id="player2-roll" class="btn-success btn">Roll</button>
+        <button id="player2-hold" class="btn-success btn">Hold</button>
+        <h2>Dice Roll: <span id="die-roll-2"></span></h2>
+        <p>Round Total: <span id="round-total-2"></span></p>
+        <p>Total Score: <span id="total-score-2"></span></p>
+    </div>
+    </div>
+  </div> -->
+  <div class="game container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Player 1: <span id = "player1"><span></h2>
+        <button id="roll1" class="btn btn-primary btn-small">Roll</button>
+        <button id="hold1" class="btn btn-primary btn-small">Hold</button>
+      <h2>Roll: <span id="roll-1"></span></h2>
+      <h2>Turn Score: <span id="turntotal1"></span></h2>
+      <h2>Total Score: <span id="totalscore1"></span></h2>
+    </div>
+    <div class="col-md-6">
+      <h2>Player 2: <span id = "player2"><span></h2>
+        <button id="roll2" class="btn btn-primary btn-small">Roll</button>
+        <button id="hold2" class="btn btn-primary btn-small">Hold</button>
+      <h2>Roll: <span id="roll-2"></span></h2>
+      <h2>Turn Score: <span id="turntotal2"></span></h2>
+      <h2>Total Score: <span id="totalscore2"></span></h2>
+    </div>
+  </div>
+</div>
   </body>
 </html>
