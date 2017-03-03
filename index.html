@@ -11,24 +11,26 @@
     <title>PIG DICE</title>
   </head>
   <body>
-    <div class="jumbotron">
+    <div class="nameinput container">
+<div class="jumbotron">
     <form id="player1">
       <div class="form-group">
         <label for="player1">Player1</label><br>
         <!--SECTION FOR FILLING Player1's NAME-->
-        <input type="text" class="form-control" placeholder="Enter Name">
+        <input type="text" class="form-control input1" placeholder="Enter Name">
       </div>
     </form>
     <form id="player2">
       <div class="form-group">
         <label for="player1">Player2</label><br>
         <!--SECTION FOR FILLING Player2's NAME-->
-        <input type="text" class="form-control" id="player2" placeholder="Enter Name">
+        <input type="text" class="form-control input2" placeholder="Enter Name">
       </div>
       </form>
       <!--BUTTON START PLAYING GAME-->
-      <button type="submit" class="btn btn-primary btn-lg">PLAY</button>
+      <button type="submit" class="btn btn-primary btn-lg" id="play">PLAY</button>
       <!-- <button type="button" class="btn btn-primary btn-lg">Large</button> -->
+</div>
 </div>
 <!-- <div class="player-console container">
     <button id="new-game" class="btn-success btn">NEW GAME</button>
@@ -53,9 +55,10 @@
     </div>
   </div> -->
   <div class="game container">
+    <button id="play-again" class="btn btn-primary btn-small">PLAY AGAIN</button>
   <div class="row">
     <div class="col-md-6">
-      <h2>Player 1: <span id = "player1"><span></h2>
+      <h2>Player 1: <span id = "span-pone"><span></h2>
         <button id="roll1" class="btn btn-primary btn-small">Roll</button>
         <button id="hold1" class="btn btn-primary btn-small">Hold</button>
       <h2>Roll: <span id="roll-1"></span></h2>
@@ -63,7 +66,7 @@
       <h2>Total Score: <span id="totalscore1"></span></h2>
     </div>
     <div class="col-md-6">
-      <h2>Player 2: <span id = "player2"><span></h2>
+      <h2>Player 2: <span id = "span-ptwo"><span></h2>
         <button id="roll2" class="btn btn-primary btn-small">Roll</button>
         <button id="hold2" class="btn btn-primary btn-small">Hold</button>
       <h2>Roll: <span id="roll-2"></span></h2>

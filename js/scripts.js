@@ -51,8 +51,69 @@ PigD.prototype.hold = function () {
     this.pName ="";
   }
   var clearValues = function(){
-    $(".player1").val("");
-    $(".player2").val("");
+    $(".input1").val("");
+    $(".input2").val("");
   }
   //USER INTERFACE//
-  
+  $("button#play").click(function(event){
+    pone = new Player(true);
+    ptwo =  new Player(false);
+    $(".game").show();
+    $(".nameinput").hide();
+
+    var playerone = $(".input1").val();
+    $("#span-pone").text(playerone);
+
+    var playertwo = $(".input2").val();
+    $("#span-ptwo").text(playertwo);
+
+    pone.pName=playerone;
+    ptwo.pName=playertwo;
+    });
+
+    $("button#play-again").click(function(event){
+      $(".game").hide();
+      clearValues();
+      pone.playAgain();
+      ptwo.nplayAgain();
+      $("#turntotal1").empty();
+      $("#totalscore1").empty();
+      $("#roll-1").empty();
+      $("#rturntotal2").empty();
+      $("#totalscore2").empty();
+      $("#roll-2").empty();
+
+      $(".nameinput").show();
+    });
+
+    $("button#roll1").click(function(event){
+      pone.roll = rollDie();
+      $("#roll-1").text(pone.roll);
+      pone.rollone();
+      $("#turntotal1").text(pone.roundscore);
+    });
+
+    $("button#roll2").click(function(event){
+      ptwo.roll = rollDie();
+      $("#roll-2").text(ptwo.roll);
+      player2.rollone();
+      $("#turntotall2").text(ptwo.roundscore);
+    });
+
+    $("button#hold1").click(function(event){
+      pone.hold();
+      $("#totalscore1").text(pone.totalscore);
+      $("#turntotal1").empty();
+      $("#roll-1").empty();
+      pone.scorehundred();
+    });
+
+    $("button#hold2").click(function(event){
+      ptwo.hold();
+      $("#totalscore2").text(ptwo.totalscore);
+      $("#turntotal2").empty();
+      $("#roll-2").empty();
+      ptwo.scorehundred();
+    });
+
+  });
