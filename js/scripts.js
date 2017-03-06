@@ -1,4 +1,5 @@
 //BUISNESS LOGIC//
+// PORTION FOR PLAYERS NAMES//
 var pone="";
 var ptwo="";
 
@@ -12,11 +13,7 @@ function PigD(initial) {
   this.roll = 0;
   this.roundscore = 0;
   this.totalscore = 0;
-<<<<<<< HEAD
-  this.turn = initial
-=======
   this.turn = initial;
->>>>>>> 4806bfdbe4c0f6c13cf7d610c536dc9d83f6d192
   this.pName;
 }
 //WHEN PLAYER ROLLS 1//
@@ -34,15 +31,14 @@ this.roundscore += this.roll;
 PigD.prototype.hold = function () {
   this.totalscore += this.roundscore;
 
-  //ONCE HAVE SCORE ADDED ROUNDSCORE MADE 0 AGAIN//
+//ONCE HAVE SCORE ADDED ROUNDSCORE MADE 0 AGAIN//
   this.roundscore = 0;
   alert(this.pName + ", your turn is over");
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4806bfdbe4c0f6c13cf7d610c536dc9d83f6d192
-  //WHEN PLAYER SCORES 100//
+
+
+//WHEN PLAYER SCORES 100//
   PigD.prototype.scorehundred = function () {
     if (this.totalscore >= 100) {
       alert(this.pName + " is the WINNER!");
@@ -67,19 +63,18 @@ PigD.prototype.hold = function () {
     $(".game").show();
     $(".nameinput").hide();
 
-<<<<<<< HEAD
+
     var firstplayer = $(".firstplayer").val();
     $("#firstplayer").text(firstplayer);
 
     var secondplayer = $(".secondplayer").val();
     $("#secondplayer").text(secondplayer);
-=======
-    var playerone = $(".input1").val();
-    $("#firstplayer").text(playerone);
 
-    var playertwo = $(".input2").val();
-    $("#secondplayer").text(playertwo);
->>>>>>> 4806bfdbe4c0f6c13cf7d610c536dc9d83f6d192
+    // var playerone = $(".input1").val();
+    // $("#firstplayer").text(playerone);
+    //
+    // var playertwo = $(".input2").val();
+    // $("#secondplayer").text(playertwo);
 
     pone.pName=firstplayer;
     ptwo.pName=secondplayer;
