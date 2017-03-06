@@ -70,12 +70,6 @@ PigD.prototype.hold = function () {
     var secondplayer = $(".secondplayer").val();
     $("#secondplayer").text(secondplayer);
 
-    // var playerone = $(".input1").val();
-    // $("#firstplayer").text(playerone);
-    //
-    // var playertwo = $(".input2").val();
-    // $("#secondplayer").text(playertwo);
-
     pone.pName=firstplayer;
     ptwo.pName=secondplayer;
     });
